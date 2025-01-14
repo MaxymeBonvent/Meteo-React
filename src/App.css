@@ -1,0 +1,379 @@
+/* -------- PROPRIÉTÉS COMMUNES -------- */
+
+/* Page */
+body{
+  /* Fond et contour */
+  background-color: cornflowerblue;
+
+  /* Centrage */
+  margin: auto;
+}
+
+/* Titres */
+h1{
+  /* Alignement du texte */
+  text-align: center;
+}
+
+/* Grand conteneur */
+.grand_conteneur{
+  /* Fond et contour */
+  background: linear-gradient(to bottom, rgb(30, 30, 30), rgb(0, 80, 180), rgb(0, 100, 200));
+  border-radius: 8px;
+
+  /* Position des éléments internes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Texte dans le grand conteneur */
+.grand_conteneur div{
+  color: rgb(220, 220, 220);
+}
+
+/* Soleil et Lune  */
+.soleil, .lune{
+  /* Dimensions */
+  transform: scale(2.5);
+
+  /* Espace externe */
+  margin: 20px;
+}
+
+/* Soleil */
+.soleil{
+  /* Couleur */
+  fill: orange; /* Les icônes SVG changent de couleur avec fill et non color */
+}
+
+/* Lune */
+.lune{
+  /* Couleur */
+  fill: white; /* Les icônes SVG changent de couleur avec fill et non color */
+
+  /* Ombre */
+  filter: drop-shadow(0 0 8px white);
+  /* drop-shadow(Décalage en X Décalage en Y Rayon de l'ombre (plus il est grand, moins l'ombre est lumineuse) Couleur de l'ombre) */
+}
+
+/* Température */
+.temperature{
+  /* Espace externe */
+  margin-top: 10px;
+
+  /* Taille du texte */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Ressenti */
+.ressenti{
+  /* Espace externe */
+  margin-bottom: 10px;
+}
+
+/* Lieu */
+.lieu{
+  /* Espace externe */
+  margin-top: 5px;
+
+  /* Taille du texte */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Boutons */
+button{
+  /* Souris */
+  cursor: pointer;
+}
+
+/* Formulaire */
+form{
+  /* Espace externe */
+  margin-bottom: 10px;
+
+  /* Position des éléments internes */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* -------- RESPONSIVE -------- */
+
+/* VERSION TRÈS PETITE */
+@media all and (max-width: 344px)
+{
+  /* Corps */
+  body{
+    /* Dimensions */
+    width: 62%;
+    height: 500px;
+  }
+
+  /* Formulaire et grand conteneur */
+  form, .grand_conteneur{
+    width: 90%;
+  }
+
+  /* Formulaire */
+  form{
+    /* Dimensions */
+    height: 20px;
+
+    /* Centrage */
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Champ de saisie */
+  input[type="text"]{
+    /* Dimensions */
+    width: 60%;
+
+    /* Taille du texte */
+    font-size: 15px;
+  }
+
+  /* Bouton */
+  button{
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Grand conteneur et formulaire */
+  .grand_conteneur{
+    /* Dimensions */
+    height: 400px;
+
+
+    /* Centrage */
+    margin: auto;
+  }
+
+  /* Texte */
+  .info{
+    /* Taille */
+    font-size: 22px;
+
+    /* Espace externe */
+    margin-bottom: 20px;
+  }
+}
+
+/* VERSION PETITE */
+@media all and (min-width: 345px) and (max-width: 540px)
+{
+  /* Corps */
+  body{
+    /* Dimensions */
+    width: 70%;
+    height: 500px;
+  }
+
+  /* Formulaire et grand conteneur */
+  form, .grand_conteneur{
+    width: 90%;
+  }
+
+  /* Formulaire */
+  form{
+    /* Dimensions */
+    height: 20px;
+
+    /* Centrage */
+    margin: auto;
+    margin-bottom: 10px;
+
+    /* Position des éléments internes */
+    justify-content: space-between;
+  }
+
+  /* Champ de saisie */
+  input[type="text"]{
+    /* Dimensions */
+    width: 60%;
+
+    /* Taille du texte */
+    font-size: 15px;
+  }
+
+  /* Bouton */
+  button{
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Grand conteneur et formulaire */
+  .grand_conteneur{
+    /* Dimensions */
+    height: 400px;
+
+
+    /* Centrage */
+    margin: auto;
+  }
+
+  /* Texte */
+  .info{
+    /* Taille */
+    font-size: 22px;
+
+    /* Espace externe */
+    margin-bottom: 20px;
+  }
+}
+
+/* VERSION MOYENNE */
+@media all and (min-width: 541px) and (max-width: 912px)
+{
+  /* Corps */
+  body{
+    /* Dimensions */
+    width: 40%;
+    height: 500px;
+  }
+
+  /* Formulaire et grand conteneur */
+  form, .grand_conteneur{
+    width: 90%;
+  }
+
+  /* Formulaire */
+  form{
+    /* Dimensions */
+    height: 20px;
+
+    /* Centrage */
+    margin: auto;
+    margin-bottom: 10px;
+
+    /* Position des éléments internes */
+    justify-content: space-between;
+  }
+
+  /* Champ de saisie */
+  input[type="text"]{
+    /* Dimensions */
+    width: 60%;
+
+    /* Taille du texte */
+    font-size: 20px;
+  }
+
+  /* Bouton */
+  button{
+    /* Taille du bouton */
+    width: 40px;
+    height: 25px;
+
+    /* Taille du texte */
+    font-size: 20px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Grand conteneur et formulaire */
+  .grand_conteneur{
+    /* Dimensions */
+    height: 400px;
+
+
+    /* Centrage */
+    margin: auto;
+  }
+
+  /* Texte */
+  .info{
+    /* Taille */
+    font-size: 26px;
+
+    /* Espace externe */
+    margin-bottom: 20px;
+  }
+}
+
+/* VERSION GRANDE */
+@media all and (min-width: 913px) and (max-width: 1280px)
+{
+  /* Corps */
+  body{
+    /* Dimensions */
+    width: 40%;
+    height: 500px;
+  }
+
+  /* Formulaire et grand conteneur */
+  form, .grand_conteneur{
+    width: 90%;
+  }
+
+  /* Formulaire */
+  form{
+    /* Dimensions */
+    height: 20px;
+
+    /* Centrage */
+    margin: auto;
+    margin-bottom: 10px;
+
+    /* Position des éléments internes */
+    justify-content: space-between;
+  }
+
+  /* Champ de saisie */
+  input[type="text"]{
+    /* Dimensions */
+    width: 60%;
+
+    /* Taille du texte */
+    font-size: 20px;
+  }
+
+  /* Bouton */
+  button{
+    /* Taille du bouton */
+    width: 40px;
+    height: 25px;
+
+    /* Taille du texte */
+    font-size: 20px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Grand conteneur et formulaire */
+  .grand_conteneur{
+    /* Dimensions */
+    height: 400px;
+
+
+    /* Centrage */
+    margin: auto;
+  }
+
+  /* Texte */
+  .info{
+    /* Taille */
+    font-size: 26px;
+
+    /* Espace externe */
+    margin-bottom: 20px;
+  }
+}
